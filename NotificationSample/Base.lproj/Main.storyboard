@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Gvo-VI-2D7">
+            <objects>
+                <viewController restorationIdentifier="EventDetail" storyboardIdentifier="EventDetail" id="cmX-Cz-0oh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lu0-yg-wE0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dFy-g3-ieO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QkW-Q6-Vih"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uv1-Wb-m2T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="113"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotificationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HwA-5r-r3M">
+                                <rect key="frame" x="99.666666666666686" y="275" width="176" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="UaL-WJ-vNm"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="30"/>
+                                    <segment title="60"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFj-Fi-YBG">
+                                <rect key="frame" x="102" y="383" width="171" height="145"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="jNf-cn-a9e"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="setNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jbr-bU-Za9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HwA-5r-r3M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-115.5" id="8zz-kB-f1m"/>
+                            <constraint firstItem="EFj-Fi-YBG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DPs-E3-59h"/>
+                            <constraint firstItem="EFj-Fi-YBG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="49.5" id="NOz-zO-cb8"/>
+                            <constraint firstItem="HwA-5r-r3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZMS-F2-myH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="segment" destination="HwA-5r-r3M" id="bp9-Yi-ZK1"/>
+                        <segue destination="cmX-Cz-0oh" kind="show" identifier="toSecond" id="XxG-5Q-HYR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="112.3152709359606"/>
+        </scene>
+    </scenes>
+</document>
